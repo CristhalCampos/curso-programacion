@@ -1,0 +1,15 @@
+p {
+    color: red;
+}
+#destacado {
+    color: blue;
+}
+.subtitulo {
+    color: green;
+}
+.articulo h2 {
+    color: purple;
+}
+.articulo p {
+    color: brown;
+}
