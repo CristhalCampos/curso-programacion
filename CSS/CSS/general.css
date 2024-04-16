@@ -1,14 +1,14 @@
-/*ID*/
+/*Selector de ID*/
 #destacado {
     color: blue;
 }
 
-/*CLASE*/
+/*Selector de Clase*/
 .subtitulo {
     color: green;
 }
 
-/*ETIQUETA*/
+/*Selector de Etiqueta*/
 p {
     color: red;
 }

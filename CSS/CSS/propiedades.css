@@ -1,6 +1,7 @@
 /*Selector universal*/
 * {
-    color: brown;
+    color: brown !important;
+    font-family: "Montserrat", sans-serif;
 }
 
 p {
@@ -13,7 +14,10 @@ p {
     background-color: hsl(0%, 100%, 50%);
     */
     background-color: #155adba3;
-    /*Tamaño de la letra*/
+    /*
+    Tamaño de la letra
+    font-size: 0.8rem;
+    */
     font-size: 20px;
     /*Grosor de la letra*/
     font-weight: 900;
@@ -27,6 +31,7 @@ p {
     border-left: 1px solid green;
     border-right: 1px solid green;
     border-radius: 15px;
+    /*width: 50%*/
     width: 180px;
     height: 35px;
     /*Distancia entre un elemento y otro
@@ -88,4 +93,5 @@ body {
     background-image: url(https://www.elsoldetijuana.com.mx/incoming/7h4hk6-kesikesiperrito.jpg/alternates/LANDSCAPE_768/Kesikesiperrito.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    /*background-position: center;*/
 }
