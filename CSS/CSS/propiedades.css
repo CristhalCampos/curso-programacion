@@ -4,6 +4,88 @@
 }
 
 p {
+    /*
+    Color de fondo
     background-color: cornflowerblue;
+    background-color: rgb(25, 65, 208);
+    background-color: rgba(100, 148, 237, 0.79);
+    background-color: #21a04b;
+    background-color: hsl(0%, 100%, 50%);
+    */
+    background-color: #155adba3;
+    /*Tamaño de la letra*/
     font-size: 20px;
+    /*Grosor de la letra*/
+    font-weight: 900;
+    /*
+    border-style: double;
+    border-width: 1px;
+    border-color: black;
+    */
+    border-top: 1px solid black;
+    border-bottom: 1px solid red;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+    border-radius: 15px;
+    width: 180px;
+    height: 35px;
+    /*Distancia entre un elemento y otro
+    margin: 25px;
+    margin-bottom: 30px;
+    */
+    margin: 30px 0 30px 20px;
+
+    /*Distancia del contenido con respecto al borde
+    padding: 20px;
+    */
+    padding: 10px 0 10px;
+
+    /*linea de afuera (a diferencia de border, no va hacer que la caja crezca)*/
+    outline: 2px solid green;
+
+    text-align: center;
+    text-decoration: underline green double 3px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    text-shadow: 2px 2px 3px black;
+    font-family: "Montserrat", sans-serif;
+}
+
+p:hover {
+    background-color: purple;
+}
+/*pseudo clases*/
+a:visited {
+    color: aquamarine;
+}
+
+a:link {
+    color: blueviolet;
+}
+
+a:active {
+    color: cadetblue;
+}
+/*pseudo elementos*/
+p::first-letter {
+    font-size: 25px;
+}
+
+p::first-line {
+    color: chocolate;
+}
+
+P::after {
+    content: "Adios";
+}
+
+p::before {
+    content: "Hola";
+}
+
+body {
+    background-image: url(https://www.elsoldetijuana.com.mx/incoming/7h4hk6-kesikesiperrito.jpg/alternates/LANDSCAPE_768/Kesikesiperrito.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

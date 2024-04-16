@@ -1,15 +1,22 @@
-p {
-    color: red;
-}
+/*ID*/
 #destacado {
     color: blue;
 }
+
+/*CLASE*/
 .subtitulo {
     color: green;
 }
+
+/*ETIQUETA*/
+p {
+    color: red;
+}
+
 .articulo h2 {
     color: purple;
 }
+
 .articulo p {
     color: brown;
 }
