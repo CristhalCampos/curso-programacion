@@ -1,0 +1,17 @@
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: ejemplo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ejemplo {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: yellow;
+    }
+}

@@ -1,6 +1,39 @@
+/*raiz en donde se puede almacenar un valor para reutilizarlo*/
+:root {
+  --main-color-text: white;
+}
+
 section {
     display: grid;
-    /*grid-template-columns: 1fr 1fr 1fr;*/
+    /*
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: 25% 75%;
+    */
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+    /*Centrar horizontalmente*/
+    justify-items: center;
+    /*Centrar verticalmente (para esto agregamos display flex)*/
+    align-content: center;
+}
+section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 5s, color 2s;
+}
+section div:hover {
+  background-color: darkblue;
+  color: var(--main-color-text);
+}
+.info {
+  display: grid;
+  /*grid-template-columns: 33% 66%;*/
+  grid-template-columns: repeat(12, 1fr);
+}
+.izquierda {
+  grid-column: span 4;
+}
+.derecha {
+  grid-column: span 8;
 }
