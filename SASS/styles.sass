@@ -1,0 +1,39 @@
+/*@use './componentes/_utilidades' as *
+@inport './componentes/utilidades'
+    
+/*Variables
+/*$main-color: red
+
+/*Mixins. Bloque de codigo reutilizable
+/*@mixin flex
+    display: flex
+    justify-content: center
+    align-items: center
+
+/*@mixin flex($display, $justify, $align)
+    display: $display
+    justify-content: $justify
+    align-items: $align
+
+/*Se puede colocar valores por default
+/*@mixin flex($display: fllex, $justify: center, $align: center)
+    display: $display
+    justify-content: $justify
+    align-items: $align
+        
+p
+    color: $main-color
+
+/*div
+    background-color: $main-color
+    @include flex(flex, space-between, center)
+    h1
+        @include flex(flex, center, center)
+        color: blue
+
+div
+    background-color: $main-color
+    @include flex(flex, space-between, center)
+    h1
+        @include flex()
+        color: blue

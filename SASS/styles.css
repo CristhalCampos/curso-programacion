@@ -1,0 +1,40 @@
+/*Variables */
+/*Mixins. Bloque de codigo reutilizable */
+/*Variables */
+/*$main-color: red */
+/*Mixins. Bloque de codigo reutilizable */
+/*@mixin flex
+ *  display: flex
+ *  justify-content: center
+ *  align-items: center */
+/*@mixin flex($display, $justify, $align)
+ *  display: $display
+ *  justify-content: $justify
+ *  align-items: $align */
+/*Se puede colocar valores por default */
+/*@mixin flex($display: fllex, $justify: center, $align: center)
+ *  display: $display
+ *  justify-content: $justify
+ *  align-items: $align */
+p {
+  color: red;
+}
+
+/*div
+ *  background-color: $main-color
+ *  @include flex(flex, space-between, center)
+ *  h1
+ *      @include flex(flex, center, center)
+ *      color: blue */
+div {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div h1 {
+  display: fllex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+}/*# sourceMappingURL=styles.css.map */

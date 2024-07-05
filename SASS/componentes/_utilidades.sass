@@ -1,0 +1,26 @@
+/*Variables
+$main-color: red
+
+/*Mixins. Bloque de codigo reutilizable
+/*@mixin flex($display: fllex, $justify: center, $align: center)
+    display: $display
+    justify-content: $justify
+    align-items: $align
+
+/*Condicionales
+@mixin colors($text-color: black, $background-color: white)
+    @if $background-color == black
+        color: white
+    @else 
+        color: $text-color
+    background-color: $background-color
+
+@mixin flex($display: flex, $justify: center, $align: center)
+    @if $display == flex
+        display: $display
+        justify-content: $justify
+        align-items: $align
+    @else if $display == grid
+        display: $display
+        justify-items: $justify
+        align-content: $align
