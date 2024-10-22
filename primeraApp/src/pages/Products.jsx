@@ -7,6 +7,8 @@ import girl3 from "./../resources/img/girl3.png";
   y ciclo de vida de los componentes funcionales
 */
 import { useState, useEffect, useRef } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "./../context/themeContext";
 /*
   UseState
   es un hook que nos permite manejar el estado de un componente
@@ -21,7 +23,7 @@ import { useState, useEffect, useRef } from "react";
 */
 
 export default function Products() {
-  const background = ["bg-blue-600", "bg-orange-600", "bg-green-600"];
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   const [color, setColor] = useState(0);
   const [image, setImage] = useState(<img src={girl1} className="h-96" />);
   const [characters, setCharacters] = useState(null);
@@ -105,11 +107,11 @@ export default function Products() {
   return (
     <>
       <section
-        className={`grid grid-cols-1 md:grid-cols-2 md:justify-items-center h-min-[80vh] px-8 bg-blue-500 transition-all duration-300`}
+        className={`grid grid-cols-1 md:grid-cols-2 md:justify-items-center h-min-[80vh] px-8 ${darkMode ? "bg-slate-700" : "bg-blue-500"} transition-all duration-300`}
       >
         <div className="flex flex-col justify-center items-center md:items-start gap-3 pt-4">
-          <h1 className="font-bold text-center md:text-start text-3xl text-black">Prueba nuestro nuevo Shampoo</h1>
-          <p className="font-normal text-center md:text-start text-black">
+          <h1 className={`font-bold text-center md:text-start text-3xl ${darkMode ? "text-white" : "text-black"}`}>Prueba nuestro nuevo Shampoo</h1>
+          <p className={`font-normal text-center md:text-start ${darkMode ? "text-white" : "text-black"}`}>
             Una mezcla de extratos frutales que protegeran tu cabello
           </p>
           <div className="flex justify-center md:justify-start">
@@ -128,8 +130,8 @@ export default function Products() {
               setImage(image == <img src={girl2} className="h-96" /> || <img src={girl3} className="h-96" /> ? <img src={girl1} className="h-96" /> : <img src={girl2} className="h-96" />);
             }}
             className={`w-[15px] h-[15px] rounded-full ${
-              color == 0 ? "bg-yellow-400" : "bg-black"
-            } hover:bg-slate-700 transition-all duration-300`}
+              color == 0 ? "bg-yellow-400" : darkMode ? "bg-white" : "bg-black"
+            } ${darkMode ? "hover:bg-slate-300" : "hover:bg-slate-700"} transition-all duration-300`}
           ></button>
           <button
             onClick={() => {
@@ -137,8 +139,8 @@ export default function Products() {
               setImage(image == <img src={girl1} className="h-96" /> || <img src={girl3} className="h-96" /> ? <img src={girl2} className="h-96" /> : <img src={girl3} className="h-96" />);
             }}
             className={`w-[15px] h-[15px] rounded-full ${
-              color == 1 ? "bg-yellow-400" : "bg-black"
-            } hover:bg-slate-700 transition-all duration-300`}
+              color == 1 ? "bg-yellow-400" : darkMode ? "bg-white" : "bg-black"
+            } ${darkMode ? "hover:bg-slate-300" : "hover:bg-slate-700"} transition-all duration-300`}
           ></button>
           <button
             onClick={() => {
@@ -146,8 +148,8 @@ export default function Products() {
               setImage(image == <img src={girl1} className="h-96" /> || <img src={girl2} className="h-96" /> ? <img src={girl3} className="h-96" /> : <img src={girl1} className="h-96" />);
             }}
             className={`w-[15px] h-[15px] rounded-full ${
-              color == 2 ? "bg-yellow-400" : "bg-black"
-            } hover:bg-slate-700 transition-all duration-300`}
+              color == 2 ? "bg-yellow-400" : darkMode ? "bg-white" : "bg-black"
+            } ${darkMode ? "hover:bg-slate-300" : "hover:bg-slate-700"} transition-all duration-300`}
           ></button>
         </div>
       </section>
